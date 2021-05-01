@@ -1,0 +1,16 @@
+.header-wrapper {position: relative;}
+.navi-wrapper {background-color: blueviolet; display: flex; justify-content: center;}
+.navi-wrapper .navi{border: 1px solid black; padding: .7em 1.25em; margin-right: 1em; cursor: pointer;}
+
+.sub-navi-wrapper {width: 100%; position: absolute; background-color: cadetblue;}
+.sub-navi-wrapper .sub-navi {display: none; text-align: center;}
+
+.sub-navi-wrapper .sub-navi.nav1 {}
+.sub-navi-wrapper .sub-navi.nav2 {}
+.sub-navi-wrapper .sub-navi.nav3 {}
+.sub-navi-wrapper .sub-navi.nav4 {}
+
+
+
+.nd-btn {background-color: aquamarine; color: black;}
+
