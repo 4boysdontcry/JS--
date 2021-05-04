@@ -3,7 +3,7 @@
 .navi-wrapper .navi{border: 1px solid black; padding: .7em 1.25em; margin-right: 1em; cursor: pointer;}
 
 .sub-navi-wrapper {width: 100%; position: absolute; background-color: cadetblue;}
-.sub-navi-wrapper .sub-navi {display: none; text-align: center;}
+.sub-navi-wrapper .sub-navi {display: none; text-align: center; padding: 2em 0;}
 
 .sub-navi-wrapper .sub-navi.nav1 {}
 .sub-navi-wrapper .sub-navi.nav2 {}
