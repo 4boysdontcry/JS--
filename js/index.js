@@ -37,6 +37,16 @@ function onShowSubNavi(){
   $snav.eq(idx).show()
 }
 
+// 각각의 navi 항목 안에 sub-navi가 위치하는 경우 class active를 이용해 show, hide 시킨다.
+  $('.navi2').on('mouseenter', onShowSubNavi)
+
+   function onShowSubNavi(){
+		$('.sub-navi2').removeClass('active');
+		$(this).find('.sub-navi2').addClass('active');
+  }
+
+
+
 
 // Q1. 10까지의 숫자중에 짝수만 출력
 for(var i = 0; i < 11; i++){
@@ -55,4 +65,4 @@ for(var i = 0; i < 11; i++){
 }
 var idx = 0;
 idx = $('.sub-navi').index();
-console.log($('.sub-navi'))
+console.log($('.sub-navi'));

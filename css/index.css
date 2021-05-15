@@ -11,6 +11,12 @@
 .sub-navi-wrapper .sub-navi.nav4 {}
 
 
+.block-wrapper {background-color: aquamarine; width: 100%; margin: 5em 0; position: relative;}
+.navi2-wrapper {display: flex; justify-content: space-between;}
+.navi2-wrapper .navi2 > a {padding: 3em;}
+.navi2-wrapper .navi2 > a:hover {background-color: bisque;}
+.navi2-wrapper .navi2 > .sub-navi2 {position: absolute; width: 100%; background-color: #333; left: 0; display: none;}
+.navi2-wrapper .navi2 > .sub-navi2.active {display: block;}
+
 
 .nd-btn {background-color: aquamarine; color: black;}
-
