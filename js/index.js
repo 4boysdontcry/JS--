@@ -23,27 +23,43 @@ var nd = $('.nd-btn')
  }
 
 
-var i = 0;
-var $nav = $('.navi')
-var $navLen = $('.navi').length
-var $snav = $('.sub-navi')
-var $snavLen = $('.sub-navi').length
+// var i = 0;
+// var $nav = $('.navi')
+// var $navLen = $('.navi').length
+// var $snav = $('.sub-navi')
+// var $snavLen = $('.sub-navi').length
 
-$nav.on('mouseenter', onShowSubNavi)
+// $nav.on('mouseenter', onShowSubNavi)
 
-function onShowSubNavi(){
-  var idx = $(this).data('idx')
-  $snav.hide()
-  $snav.eq(idx).show()
-}
+// function onShowSubNavi(){
+//   var idx = $(this).data('idx')
+//   $snav.hide()
+//   $snav.eq(idx).show()
+// }
 
 // 각각의 navi 항목 안에 sub-navi가 위치하는 경우 class active를 이용해 show, hide 시킨다.
   $('.navi2').on('mouseenter', onShowSubNavi)
+  $('.navi2').on('mouseleave', onHideSubNavi)
 
    function onShowSubNavi(){
 		$('.sub-navi2').removeClass('active');
 		$(this).find('.sub-navi2').addClass('active');
   }
+   function onHideSubNavi(){
+		$('.sub-navi2').removeClass('active');
+  }
+
+
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+
 
 
 

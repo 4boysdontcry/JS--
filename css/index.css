@@ -20,3 +20,7 @@
 
 
 .nd-btn {background-color: aquamarine; color: black;}
+
+
+.map-container {border: 2px solid red; width: 50%; height: 500px;}
+.map-container  #map{width: 100%; height: 100%;}
