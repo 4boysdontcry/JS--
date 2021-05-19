@@ -15,15 +15,15 @@
 .navi2-wrapper {display: flex; justify-content: space-between;}
 .navi2-wrapper .navi2 > a {padding: 3em;}
 .navi2-wrapper .navi2 > a:hover {background-color: bisque;}
-.navi2-wrapper .navi2 > .sub-navi2 {position: absolute; width: 100%; background-color: #333; left: 0; display: none;}
+.navi2-wrapper .navi2 > .sub-navi2 {position: absolute; width: 100%; color: #fff; text-align: center; background-color: #333; left: 0; display: none;}
 .navi2-wrapper .navi2 > .sub-navi2.active {display: block;}
 
 
 .nd-btn {background-color: aquamarine; color: black;}
 
 
-.map-container {border: 2px solid red; width: 50%; height: 500px;}
-.map-container  #map{width: 100%; height: 100%;}
+.map-wrapper {border: 2px solid red; width: 50%; height: 500px;}
+.map-wrapper  #map{width: 100%; height: 100%;}
 
 .bt-top {position: fixed; width: 50px; height: 50px; color: black; background-color: cadetblue; font-size: 15px; border-radius: 50%; 
   bottom: 5%; right: 5%;}
