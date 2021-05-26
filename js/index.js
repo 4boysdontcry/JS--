@@ -1,6 +1,5 @@
 document.write(1+1)
 
-
 var avo = 3;
 avo >= 1 ?  console.log('buy 6 milk') : console.log('Dont Buy Milk')
 
@@ -49,7 +48,6 @@ var nd = $('.nd-btn')
 		$('.sub-navi2').removeClass('active');
   }
 
-
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -57,7 +55,6 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     };
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption); 
-
 
 
 // aside top 버튼 - 스르륵 올라가게 해줌
@@ -69,8 +66,6 @@ function movingTop(e){
 }
 
 
-
-
 // Q1. 10까지의 숫자중에 짝수만 출력
 for(var i = 0; i < 11; i++){
   if(i % 2 !== 0) {   // i값을 2로 나누었을때 나머지값(%)이 0과 같은가? -> 같으면(짝수) true, 다르면(홀수) false
@@ -78,10 +73,11 @@ for(var i = 0; i < 11; i++){
   }
   console.log(`q1. ${i}`)
 }
+console.log('====================')
 
 // Q2. 8까지만 출력
 for(var i = 0; i < 11; i++){
-  if(i > 8) {
+  if(i > 8) {   // 8보다 큰 수가 나올 차례이면 함수를 빠져나온다
     break;
   }
   console.log(`q2. ${i}`)
@@ -89,3 +85,10 @@ for(var i = 0; i < 11; i++){
 var idx = 0;
 idx = $('.sub-navi').index();
 console.log($('.sub-navi'));
+
+// ES6 - Arrow function
+const showResult = (a, b) => {
+  console.log(a + b);
+}
+showResult(3, 5);
+

@@ -35,10 +35,10 @@ function sum3(a, b){
   var e = a * b;
   var f = a / b;
   var g = a % b;
-  window.document.write('<br>답:'+c);
-  window.document.write('<br>답:'+d);
-  window.document.write('<br>답:'+e);
-  window.document.write('<br>답:'+f);
-  window.document.write('<br>답:'+g);
+  window.document.write('<br>답:'+c, '<br>답:'+d, '<br>답:'+e, '<br>답:'+f, '<br>답:'+g);
+  // window.document.write('<br>답:'+d);
+  // window.document.write('<br>답:'+e);
+  // window.document.write('<br>답:'+f);
+  // window.document.write('<br>답:'+g);
 }
 sum3(5, 3);
