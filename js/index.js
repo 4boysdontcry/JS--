@@ -123,3 +123,52 @@ console.log(gohard)
 console.log(poor)
 
 
+// node - express
+const express = require('express');   // 설치한 파일은 경로를 써줄 필요없이 파일명만 쓰면 스스로 index나 main에 명시된 파일을 찾는다.
+const app = express();    // express를 app 이라는 변수에 담음
+
+app.listen(3000, () => { console.log('http://127.0.0.1:3000') })
+// 3000번 포트의 요청사항을 듣겠다. 요청사항을 가져온것을 알아보기 쉽게 하기위해 콘솔에 찍어줌
+
+app.get('/', (req, res, next) => {
+  res.send( '<h1>Hello Root!</h1>' )  // res(response)는 브라우저의 req(request: 요청)에 대한 응답으로 보내주는 값을 작성한 것
+})
+
+
+// http://127.0.0.1:3000/login?name=4boysdontcry 으로 요청된 것에 대해
+app.get('/login', (req, res, next) => {
+  let loginUser = req.query.name;   // 브라우저의 요청중 query는 주소줄의 ? 뒤에 오는 요청사항들을 뜻한다. 여기서는 요청 주소줄에 name이 명시되어 들어왔다.
+  res.send( `<h1>Hello ${loginUser}!</h1>` );  // ${}은 ES5의 '+v.something+' 과 같다.
+})
+
+
+// http://127.0.0.1:3000/sign/4boysdontcry 으로 요청된 것에 대해
+app.get('/sign/:name', (req, res, next) => {    // 여기서는 받을 루트에 name을 지정했기 때문에 밑의 req.params.name으로 받는것이 가능하다.
+  let loginUser = req.params.name;
+  res.send( `<h1>Hello ${loginUser}!</h1>` )
+})
+
+
+// http://127.0.0.1:3000/data/2.5/weather?appid=abcd&units=metric&lat=37.25&lon=127.35 로 요청된 것에 대해
+app.get('/data/2.5/weather', (req, res, next) => {
+  // let appid = req.query.appid
+  // let units = req.query.units
+  // let lan = req.query.lan
+  // let lon = req.query.lon    //  ↙ 이것을 구조분해 할당으로 받아오면
+  let { appid, units, lat, lon } = req.query;
+  console.log('날씨정보 가져오는 로직');
+  res.json({    // json 형태로 보내줌
+    city: 'seoul',
+    lat,    // lat: lat을 줄여서 작성한 것
+    lon,    // lon: lon을 줄여서 작성한 것
+    dt: new Date.getTime(),   // 생성자 함수 Date를 통해 시간을 가져옴
+    main: {
+      temp: 18.95,
+      feels_like: 17.3
+    },
+    weather: {
+      main: 'rain',
+      description: 'scatter rain'
+    }
+  })
+});
