@@ -138,4 +138,3 @@ app.get('/data/2.5/weather', (req, res, next) => {
 });
 
 
-
